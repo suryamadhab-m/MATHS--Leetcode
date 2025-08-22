@@ -4,15 +4,8 @@ class Solution(object):
         :type nums: List[int]
         :rtype: int
         """
-        main=0
+        count=0
         for i in nums:
-            count=0
-            x=i
-            while x!=0:
-                r=x%10
+            if len(str(i))%2==0:
                 count+=1
-                x//=10
-            if count%2==0:
-                main+=1
-        return main
-        
+        return count
